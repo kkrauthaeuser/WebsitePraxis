@@ -12,7 +12,7 @@
     "dev:serve": "npx serve",
     "watch:css": "tailwindcss -i ./src/tailwind.css -o ./public/tailwind.css --watch && npx serve",
     "dev": "concurrently \"npm run dev:serve\" \"npm run watch:css\"",
-    "build": "cp -d public build && tailwindcss -i ./src/tailwind.css -o ./build/tailwind.css --minify"
+    "build": "cp -dr ./public ./docs && tailwindcss -i ./src/tailwind.css -o ./docs/tailwind.css --minify"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.18",
